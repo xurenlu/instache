@@ -128,8 +128,12 @@ PHP_MSHUTDOWN_FUNCTION(instache)
        if(tmp!=NULL){
             hl_link_iter(tmp,iter){   
                 last = iter;
+                free(iter->key);
+                free(iter->data);
             }
             if(iter!=NULL){
+                free(iter->data);
+                free(iter->key);
             }
        }
     }
