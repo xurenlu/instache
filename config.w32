@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("instache", "for instache support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("instache", "enable instache support", "no");
+
+if (PHP_INSTACHE != "no") {
+	EXTENSION("instache", "instache.c");
+}
+
